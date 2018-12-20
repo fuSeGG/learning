@@ -1,0 +1,14 @@
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe.config
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.pdb
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csprojAssemblyReference.cache
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csproj.CoreCompileInputs.cache
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.exe
+C:\PersonalLearning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csprojAssemblyReference.cache
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csproj.CoreCompileInputs.cache
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.exe
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe.config
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe
+D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.pdb

@@ -1,0 +1,15 @@
+D:\repos\NoteWorld\NoteWorld\bin\Debug\NoteWorld.exe.config
+D:\repos\NoteWorld\NoteWorld\bin\Debug\NoteWorld.exe
+D:\repos\NoteWorld\NoteWorld\bin\Debug\NoteWorld.pdb
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.csprojAssemblyReference.cache
+D:\repos\NoteWorld\NoteWorld\obj\Debug\MainWindow.g.cs
+D:\repos\NoteWorld\NoteWorld\obj\Debug\App.g.cs
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld_MarkupCompile.cache
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld_MarkupCompile.lref
+D:\repos\NoteWorld\NoteWorld\obj\Debug\MainWindow.baml
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.g.resources
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.Properties.Resources.resources
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.csproj.GenerateResource.cache
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.csproj.CoreCompileInputs.cache
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.exe
+D:\repos\NoteWorld\NoteWorld\obj\Debug\NoteWorld.pdb
