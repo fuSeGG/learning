@@ -24,8 +24,7 @@ namespace PreFlopPlayer {
             var hp = new HandParser();
             foreach (Player p in myPlayers) {                
                 Write(p.Position + ": ");
-                p.ShowHand(p.Hand);
-                
+                p.ShowHand(p.Hand);                
                 if (p.Position is "UTG") { Console.WriteLine($"[UTG {strat.Action(hp.HandType(p.Hand))}s]"); }
                 else Console.WriteLine();
             }
