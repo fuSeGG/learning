@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static PreFlopPlayer.Enums;
 
 namespace PreFlopPlayer {
     public class Card {
@@ -27,5 +26,7 @@ namespace PreFlopPlayer {
         }       
     }
 
+    public enum Rank { Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace };
+    public enum Suit { hearts, diamonds, spades, clubs };
 
 }

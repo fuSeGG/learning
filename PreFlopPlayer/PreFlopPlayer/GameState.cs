@@ -14,7 +14,7 @@ namespace PreFlopPlayer {
             deck.FillDeck();
             deck.Shuffle();
 
-            foreach (Player p in players) {
+            foreach (var p in players) {
 
                 // Move the Dealer BTN                
                 // p.Position = PositionDictionary.
