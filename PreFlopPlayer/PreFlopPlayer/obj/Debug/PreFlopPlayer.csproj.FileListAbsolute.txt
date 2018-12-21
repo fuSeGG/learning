@@ -12,3 +12,10 @@ D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb
 D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe.config
 D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe
 D:\Repos\PreFlopPlayer\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.pdb
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe.config
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.pdb
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csprojAssemblyReference.cache
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csproj.CoreCompileInputs.cache
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.exe
+D:\learningRepo\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb

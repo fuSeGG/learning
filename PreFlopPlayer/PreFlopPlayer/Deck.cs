@@ -12,14 +12,17 @@ namespace PreFlopPlayer {
         List<Card> cards = new List<Card>();
 
         public void FillDeck() {
-            foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit))) {
-                foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank))) {
-                    cards.Add(new Card(rank, suit));
+            if (cards.Count != 0) { cards.Clear();}
+            else {
+                foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit))) {
+                    foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank))) {
+                        cards.Add(new Card(rank, suit));
+                    }
                 }
             }
         }
 
-        
+
         public List<Card> DealHand(List<Card> n, Deck d) {
             n.Add(d.TakeTopCard());
             n.Add(d.TakeTopCard());
@@ -51,7 +54,8 @@ namespace PreFlopPlayer {
                 Card topCard = cards[cards.Count - 1];
                 cards.RemoveAt(cards.Count - 1);
                 return topCard;
-            } else {
+            }
+            else {
                 return null;
             }
         }

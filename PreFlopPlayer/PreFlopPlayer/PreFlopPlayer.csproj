@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="ScenarioFinder.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="HandParser.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="StrategyMaker.cs" />
     <Compile Include="UTGStrat.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="Program.cs" />
