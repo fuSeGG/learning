@@ -1,7 +1,0 @@
-D:\repos\ThoughtPlatform\ThoughtPlatform\obj\Debug\ThoughtPlatform.csprojAssemblyReference.cache
-D:\repos\ThoughtPlatform\ThoughtPlatform\obj\Debug\ThoughtPlatform.csproj.CoreCompileInputs.cache
-D:\repos\ThoughtPlatform\ThoughtPlatform\bin\Debug\ThoughtPlatform.exe.config
-D:\repos\ThoughtPlatform\ThoughtPlatform\bin\Debug\ThoughtPlatform.exe
-D:\repos\ThoughtPlatform\ThoughtPlatform\bin\Debug\ThoughtPlatform.pdb
-D:\repos\ThoughtPlatform\ThoughtPlatform\obj\Debug\ThoughtPlatform.exe
-D:\repos\ThoughtPlatform\ThoughtPlatform\obj\Debug\ThoughtPlatform.pdb
