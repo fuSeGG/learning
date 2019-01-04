@@ -9,18 +9,17 @@ namespace PreFlopPlayer {
     public class Deck {
 
         List<Card> cards = new List<Card>();
+        Random rand = new Random();
 
-        public void FillDeck() {
-            if (cards.Count != 0) { cards.Clear();}
-            else {
-                foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit))) {
-                    foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank))) {
-                        cards.Add(new Card(rank, suit));
-                    }
+
+        public void NewDeck() {
+            if (cards.Count != 0) cards.Clear();
+            foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit))) {
+                foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank))) {
+                    cards.Add(new Card(rank, suit));
                 }
             }
         }
-
 
         public List<Card> DealHand(List<Card> n, Deck d) {
             n.Add(d.TakeTopCard());
@@ -28,8 +27,7 @@ namespace PreFlopPlayer {
             return n;
         }
 
-        public void Shuffle() {
-            Random rand = new Random();
+        public void Shuffle() {            
             for (int i = cards.Count - 1; i > 0; i--) {
                 int randomIndex = rand.Next(i + 1);
                 Card tempCard = cards[i];

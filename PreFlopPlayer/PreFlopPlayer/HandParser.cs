@@ -20,7 +20,7 @@ namespace PreFlopPlayer {
 
         //roughly categorises a given hand
         public Dictionary<string, bool> HandType(List<Card> hand) {
-
+             
             Dictionary<string, bool> handQuality = new Dictionary<string, bool>();
 
             handQuality.Add("isPocketPair", isPocketPair = hand[0].Rank == hand[1].Rank);
@@ -29,9 +29,12 @@ namespace PreFlopPlayer {
             handQuality.Add("isOpenConnected", isOpenConnected = ((int)hand[0].Rank >= 4 && (int)hand[1].Rank >= 4) && ((int)hand[0].Rank <= 11 && (int)hand[1].Rank <= 11) && (Math.Pow(((int)hand[0].Rank - (int)hand[1].Rank), 2) == 1));
             handQuality.Add("hasAce", hasAce = (int)hand[0].Rank == 14 || (int)hand[1].Rank == 14);
             handQuality.Add("hasKing", hasKing = (int)hand[0].Rank == 13 || (int)hand[1].Rank == 13);
-            handQuality.Add("hasQueen", hasQueen = (int)hand[0].Rank == 12 || (int)hand[1].Rank == 12);
+            handQuality.Add("hasQueen", hasQueen = (int)hand[0].Rank == 12 || (int)hand[1].Rank == 12);            
             // isClose
-            // isOneGap
+            // isOneGap         
+
+
+
 
             return handQuality;
 

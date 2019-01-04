@@ -1,0 +1,16 @@
+2 farvet, Parret Bord 7d7h4h
+
+[62] 21% 	Cat 1: 1(4 ens) + 3(hus) + 16(3 ens) + (42 overpar)
+[27] 9%		Cat 2: 12(mellempar) + 3(BottomPairTopKicker) +12(underpar)
+[14] 5%		Cat 3: 10(nFD), 3(oeSD), 1(oeSD + FD)
+[187] 64%	Cat 4: 
+
+
+
+2 farvet, Parret Bord 7h7s8s
+
+[x] x% 		Cat 1: 1(4 ens) + 9(hus) + 16(3 ens) + (36 overpar)
+[x] x%		Cat 2: 3(TPTK) +30(underpar)
+[x] x%		Cat 3: 10(nFD), 6(oeSD), 2(oeSFD)
+[x] x%		Cat 4: 
+

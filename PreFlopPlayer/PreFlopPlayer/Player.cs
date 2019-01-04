@@ -8,19 +8,22 @@ using System.Threading.Tasks;
 
 namespace PreFlopPlayer {
     class Player {
+        // fields props
         public string Name { get; set; }
         public double Stack { get; set; }
         public string Position { get; set; }
         public List<Card> Hand;
-        public double BetState { get; set; }
+        public double HasBet { get; set; }
 
+
+        // method for Showing Hand
         public void ShowHand(List<Card> h) {
             foreach (Card c in h) {
                 Console.Write($"{c.Rank} ({c.Suit})| ");
             }
         }
 
-
+        // method for adding SixPlayers
         public List<Player> AddSixPlayers() {
             List<Player> myPlayers = new List<Player>();
 
