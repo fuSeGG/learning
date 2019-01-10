@@ -9,23 +9,32 @@ public class PlayerMovement : MonoBehaviour {
 
     bool slide = false;
     bool jump = false;
+    bool sprint = false;
 
-    float runSpeed = 15f;
-
+    float runSpeed = 8f;
+    float sprintSpeed = 1.5f;
     float horizontalMove = 0f;
+    float jumpStart;
+
 
     // Update is called once per frame
     void Update() {
 
-
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (!slide) {
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        // Jump
+        if (Input.GetButtonDown("Jump")) {
+            jump = true;
+            animator.SetBool("isJumping", true);
+            jumpStart = Time.time;            
+        }
+        if (Input.GetButtonUp("Jump")) {
+            animator.SetBool("isJumping", false);
+            jump = false;
         }
         
 
-        if (Input.GetButtonDown("Jump")) { jump = true; }
-        if (Input.GetButtonDown("Slide")){
+
+        // Slide 
+        if (Input.GetButtonDown("Slide")) {
             slide = true;
             animator.SetBool("isSliding", true);
         }
@@ -33,13 +42,32 @@ public class PlayerMovement : MonoBehaviour {
             slide = false;
             animator.SetBool("isSliding", false);
         }
+
+        // Sprint
+        if (Input.GetButtonDown("Sprint")) {
+            sprint = true;
+        }
+        else if (Input.GetButtonUp("Sprint")) {
+            sprint = false;
+        }       
+            
+        
+
+        animator.SetFloat("Speed", horizontalMove);
+        if (!slide) {
+            if (sprint) { horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed * sprintSpeed; }
+            else { horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; }
+        }
     }
+
     // param: move, crouch, slide, jump
     private void FixedUpdate() {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, slide, jump);
-        jump = false;
-        slide = false;
-        animator.SetBool("isSliding", false); 
-    }
+        // jump = false;
+        // slide = false;
+        // animator.SetBool("isSliding", false);
+        // animator.SetBool("isJumping", false);
 
+    }
 }
+
