@@ -9,7 +9,7 @@ namespace ProjectEuler
 {
     class Problem13
     {
-        static void Main()
+        private static void Main()
         {
             BigInteger result = 0;
             string[] array =  {"37107287533902102798797998220837590246510135740250",
@@ -114,11 +114,13 @@ namespace ProjectEuler
 "53503534226472524250874054075591789781264330331690" };
 
 
-            foreach (var a in array)
-            {
-                result += 
-
+            foreach (string a in array)
+            {                
+                result += BigInteger.Parse(a);
             }
+
+            Console.WriteLine(result);
+            Console.ReadLine();
 
 
 
