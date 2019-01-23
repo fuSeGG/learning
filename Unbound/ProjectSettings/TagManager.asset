@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Ships
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 72028067
+    locked: 0
+  - name: Midground
+    uniqueID: 3641903679
+    locked: 0
+  - name: Ship
+    uniqueID: 2051499079
+    locked: 0
+  - name: Foreground
+    uniqueID: 3110172859
+    locked: 0
+  - name: UI
+    uniqueID: 224139195
     locked: 0
