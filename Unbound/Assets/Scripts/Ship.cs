@@ -8,26 +8,29 @@ public class Ship : MonoBehaviour
     public Rigidbody2D ship;
     const int MovePerSecond = 2;
     const int ThrustForce = 2;
-    Vector2 thrustDirection = new Vector2();
-
+    Vector3 shipDirection = new Vector3();
+    float n;
 
     public void Start()
     {
         ship = GetComponent<Rigidbody2D>();
-        thrustDirection.Set(1, 0);
+        shipDirection.Set(0, 0, ship.rotation);
     }
 
     private void FixedUpdate()
     {
         float ThrustInput = Input.GetAxis("Thrust");
         float HorizontalInput = Input.GetAxis("Horizontal");
+        ship.rotation -= HorizontalInput *100* Time.deltaTime;
+        
+        //ship.MoveRotation(HorizontalInput*100*Time.deltaTime);
 
         
 
         if (ThrustInput > 0)
         {
-            Vector2 n = thrustDirection * ThrustForce;
-            ship.AddForce(n);
+            Vector2 Accelerate = shipDirection * ThrustForce;
+            ship.AddForce(Accelerate);
         }
 
         /*
