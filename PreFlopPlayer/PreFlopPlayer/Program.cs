@@ -10,7 +10,6 @@ namespace PreFlopPlayer {
     class Program {
 
         static void Main() {
-
             var myDeck = new Deck();         
             var playerMaker = new Player();
             var dealer = new Dealer();
@@ -24,7 +23,7 @@ namespace PreFlopPlayer {
             UTGStrat strat = new UTGStrat();
             var hp = new HandParser();
             foreach (Player p in myPlayers) {                
-                Write(p.Position + ": ");
+                Write(p.Name + ": ");
                 p.ShowHand(p.Hand);
                 if (p.Position is "UTG") { Console.WriteLine($"[UTG {strat.Action(hp.HandType(p.Hand))}s]"); }
                 else Console.WriteLine();

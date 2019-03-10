@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PreFlopPlayer {
     class Dealer {
 
-        public double PotSize = 0;        
+        public float PotSize { get; set; }
 
         public void NewHand(Deck deck, List<Player> players) {
             deck.NewDeck();
@@ -17,7 +17,7 @@ namespace PreFlopPlayer {
                 // p.Position = PositionDictionary.
 
                 // Post Blinds
-                if (p.Position is "SB") { p.Stack -= 0.5; p.HasBet = 0.5; PotSize += 0.5; }
+                if (p.Position is "SB") { p.Stack -= 0.5; p.HasBet = 0.5; PotSize += 0.5f; }
                 else if (p.Position is "BB") { p.Stack -= 1; p.HasBet = 1; PotSize += 1; }
 
                 // Deal Hands
