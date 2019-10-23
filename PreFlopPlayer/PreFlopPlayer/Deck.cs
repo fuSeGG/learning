@@ -9,10 +9,8 @@ namespace PreFlopPlayer
 {
     public class Deck
     {
-
         List<Card> cards = new List<Card>();
         Random rand = new Random();
-
 
         public void NewDeck()
         {
@@ -21,7 +19,7 @@ namespace PreFlopPlayer
             {
                 foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank)))
                 {
-                    cards.Add(new Card(rank, suit));
+                    this.cards.Add(new Card(rank, suit));
                 }
             }
         }
@@ -46,7 +44,7 @@ namespace PreFlopPlayer
 
         public void ShowDeck()
         {
-            foreach (var card in cards)
+            foreach (var card in this.cards)
             {
                 WriteLine(card.Rank + "(" + card.Suit + ")");
             }
@@ -54,12 +52,12 @@ namespace PreFlopPlayer
 
         public bool isEmpty
         {
-            get { return cards.Count == 0; }
+            get { return this.cards.Count == 0; }
         }
 
         public Card TakeTopCard()
         {
-            if (!isEmpty)
+            if (!this.isEmpty)
             {
                 Card topCard = cards[cards.Count - 1];
                 cards.RemoveAt(cards.Count - 1);

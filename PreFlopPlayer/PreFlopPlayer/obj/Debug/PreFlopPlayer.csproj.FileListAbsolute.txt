@@ -26,3 +26,10 @@ Z:\Repos\learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csprojAsse
 Z:\Repos\learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csproj.CoreCompileInputs.cache
 Z:\Repos\learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.exe
 Z:\Repos\learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe.config
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.exe
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\bin\Debug\PreFlopPlayer.pdb
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csprojAssemblyReference.cache
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.csproj.CoreCompileInputs.cache
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.exe
+Z:\Repos\GitHub\Learning\PreFlopPlayer\PreFlopPlayer\obj\Debug\PreFlopPlayer.pdb

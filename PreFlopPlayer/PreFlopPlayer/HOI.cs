@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PreFlopPlayer {
-    class HOI {
-                
+namespace PreFlopPlayer
+{
+    public static class HOI
+    {
+        static Hand AA { get; }
+
         /*
         46 hænder | 290/1326 (21,87%)
         AA-22

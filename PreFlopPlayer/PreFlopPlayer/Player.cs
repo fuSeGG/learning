@@ -13,8 +13,17 @@ namespace PreFlopPlayer {
         public double Stack { get; set; }
         public string Position { get; set; }
         public List<Card> Hand;
-        public double HasBet { get; set; }
+        private double hasBet;
 
+        public double GetHasBet()
+        {
+            return this.hasBet;
+        }
+
+        public void SetHasBet(double value)
+        {
+            this.hasBet = value;
+        }
 
         // method for Showing Hand
         public void ShowHand(List<Card> h) {

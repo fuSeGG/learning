@@ -17,8 +17,8 @@ namespace PreFlopPlayer {
                 // p.Position = PositionDictionary.
 
                 // Post Blinds
-                if (p.Position is "SB") { p.Stack -= 0.5; p.HasBet = 0.5; PotSize += 0.5f; }
-                else if (p.Position is "BB") { p.Stack -= 1; p.HasBet = 1; PotSize += 1; }
+                if (p.Position is "SB") { p.Stack -= 0.5; p.SetHasBet(0.5); PotSize += 0.5f; }
+                else if (p.Position is "BB") { p.Stack -= 1; p.SetHasBet(1); PotSize += 1; }
 
                 // Deal Hands
                 if (p.Hand.Count != 0) p.Hand.Clear();

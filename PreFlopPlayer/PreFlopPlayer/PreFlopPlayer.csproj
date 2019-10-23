@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BetState.cs" />
+    <Compile Include="Brain.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Dealer.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="HOI.cs" />
+    <Compile Include="PreflopStrategy.cs" />
     <Compile Include="ScenarioFinder.cs" />
     <Compile Include="HandParser.cs" />
     <Compile Include="Player.cs" />

@@ -10,23 +10,25 @@ namespace PreFlopPlayer {
         //fields & properties
         public Rank Rank { get; }
         public Suit Suit { get; }
-        public bool faceUp { set; get; }      
+        public bool FaceUp { set; get; }      
         
 
         //methods
         public void FlipOver() {
-            faceUp = !faceUp;
+            this.FaceUp = !this.FaceUp;
         }
 
          //constructor
         public Card(Rank rank, Suit suit) {
             this.Rank = rank;
             this.Suit = suit;
-            faceUp = false;
-        }       
+            this.FaceUp = false;
+        }
+        public Card(Rank rank, Suit suit, bool faceUp)
+        {
+            this.Rank = rank;
+            this.Suit = suit;
+            this.FaceUp = faceUp;
+        }
     }
-
-    public enum Rank { Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace };
-    public enum Suit { hearts, diamonds, spades, clubs };
-
 }
