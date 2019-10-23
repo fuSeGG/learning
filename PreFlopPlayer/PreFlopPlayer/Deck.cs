@@ -14,7 +14,7 @@ namespace PreFlopPlayer
 
         public void NewDeck()
         {
-            if (cards.Count != 0) cards.Clear();
+            if (this.cards.Count != 0) this.cards.Clear();
             foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit)))
             {
                 foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank)))
@@ -33,12 +33,12 @@ namespace PreFlopPlayer
 
         public void Shuffle()
         {
-            for (int i = cards.Count - 1; i > 0; i--)
+            for (int i = this.cards.Count - 1; i > 0; i--)
             {
-                int randomIndex = rand.Next(i + 1);
-                Card tempCard = cards[i];
-                cards[i] = cards[randomIndex];
-                cards[randomIndex] = tempCard;
+                int randomIndex = this.rand.Next(i + 1);
+                Card tempCard = this.cards[i];
+                this.cards[i] = this.cards[randomIndex];
+                this.cards[randomIndex] = tempCard;
             }
         }
 
@@ -59,8 +59,8 @@ namespace PreFlopPlayer
         {
             if (!this.isEmpty)
             {
-                Card topCard = cards[cards.Count - 1];
-                cards.RemoveAt(cards.Count - 1);
+                Card topCard = this.cards[this.cards.Count - 1];
+                this.cards.RemoveAt(this.cards.Count - 1);
                 return topCard;
             }
             else
@@ -79,8 +79,8 @@ namespace PreFlopPlayer
                 // p.Position = PositionDictionary.
 
                 // Post Blinds
-                if (p.Position is "SB") { p.Stack -= 0.5; p.SetHasBet(0.5); }
-                else if (p.Position is "BB") { p.Stack -= 1; p.SetHasBet(1);}
+                if (p.Position == Positions.SB) { p.Stack -= 0.5; p.SetHasBet(0.5); }
+                else if (p.Position == Positions.BB) { p.Stack -= 1; p.SetHasBet(1);}
 
                 // Deal Hands
                 if (p.Hand.Count != 0) p.Hand.Clear();

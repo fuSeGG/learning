@@ -12,11 +12,8 @@ namespace PreFlopPlayer
     {
         static void Main()
         {
-            var myDeck = new Deck();
-            var playerMaker = new Player();
-            List<Player> myPlayers = playerMaker.AddSixPlayers();
-
-            myDeck.NewHand(myDeck, myPlayers);
+            var myDeck = new Deck();         
+            
             /*
             TEST: Print all players hands + Take Action where strategy has been written
             UTGStrat strat = new UTGStrat();
