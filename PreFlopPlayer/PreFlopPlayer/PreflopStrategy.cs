@@ -8,6 +8,7 @@ namespace PreFlopPlayer
 {
     public class PreflopStrategy
     {
+        public void UTG(Hand hand) { }
         /* UTG RFI
            (MISSING: Qx / Kx && 9 && Suited)
 

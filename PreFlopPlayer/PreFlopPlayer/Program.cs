@@ -15,9 +15,7 @@ namespace PreFlopPlayer {
             var dealer = new Dealer();
             List<Player> myPlayers = playerMaker.AddSixPlayers();
 
-            dealer.NewHand(myDeck, myPlayers);
-
-
+            dealer.NewHand(myDeck, myPlayers);        
             /*
             TEST: Print all players hands + Take Action where strategy has been written
             UTGStrat strat = new UTGStrat();
