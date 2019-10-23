@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 namespace PreFlopPlayer {
-    class Player {
+    public class Player {
         // fields props
         public string Name { get; set; }
         public double Stack { get; set; }
