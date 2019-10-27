@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace PreFlopPlayer
 {
     public enum Rank { Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace };
-    public enum Suit { hearts, diamonds, spades, clubs };
-    public enum Positions { LJ, HJ, CO, BTN, SB, BB };        
+    public enum Suit { Hearts, Spades, Diamonds, Clubs };
+    public enum Positions { LJ, HJ, CO, BTN, SB, BB };
 }

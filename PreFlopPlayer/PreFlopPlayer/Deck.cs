@@ -12,12 +12,17 @@ namespace PreFlopPlayer
         List<Card> cards = new List<Card>();
         Random rand = new Random();
 
+        public Deck()
+        {
+            NewDeck();
+        }
+
         public void NewDeck()
         {
             if (this.cards.Count != 0) this.cards.Clear();
-            foreach (Suit suit in (Suit[])Enum.GetValues(typeof(Suit)))
+            foreach (Suit suit in Enum.GetValues(typeof(Suit)))
             {
-                foreach (Rank rank in (Rank[])Enum.GetValues(typeof(Rank)))
+                foreach (Rank rank in Enum.GetValues(typeof(Rank)))
                 {
                     this.cards.Add(new Card(rank, suit));
                 }
@@ -80,7 +85,7 @@ namespace PreFlopPlayer
 
                 // Post Blinds
                 if (p.Position == Positions.SB) { p.Stack -= 0.5; p.SetHasBet(0.5); }
-                else if (p.Position == Positions.BB) { p.Stack -= 1; p.SetHasBet(1);}
+                else if (p.Position == Positions.BB) { p.Stack -= 1; p.SetHasBet(1); }
 
                 // Deal Hands
                 if (p.Hand.Count != 0) p.Hand.Clear();
