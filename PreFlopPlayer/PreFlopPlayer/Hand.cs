@@ -10,6 +10,7 @@ namespace PreFlopPlayer
     {
         public Card[] Cards = new Card[2];
 
+        public CardCombo CardCombo { get; private set; }
         public bool isPocketPair { get; private set; }
         public bool isBroadway { get; private set; }
         public bool isSuited { get; private set; }
@@ -25,15 +26,28 @@ namespace PreFlopPlayer
             CategoriseHand(this);
         }
 
+        public Hand(Card card1, Card card2)
+        {
+            this.Cards[1] = card1;
+            this.Cards[2] = card2;
+            CategoriseHand(this);
+        }
+
         private void CategoriseHand(Hand hand)
         {
+            // Order cards in hand by rank
+            hand.Cards.OrderByDescending(c => c.Rank);
+
+            // Set description bools
+            hand.isBroadway = hand.Cards.All(c => c.Rank > Rank.Ten);
+            hand.hasAce = hand.Cards.Any(c => c.Rank == Rank.Ace);
+            hand.hasKing = hand.Cards.Any(c => c.Rank == Rank.King);
+            hand.hasQueen = hand.Cards.Any(c => c.Rank == Rank.Queen);
+
             hand.isPocketPair = hand.Cards[0].Rank == hand.Cards[1].Rank;
             hand.isSuited = hand.Cards[0].Suit == hand.Cards[1].Suit;
-            hand.isBroadway = (int)hand.Cards[0].Rank >= 10 && (int)hand.Cards[1].Rank >= 10;
             hand.isOpenConnected = Math.Abs((int)hand.Cards[0].Rank - (int)hand.Cards[1].Rank) == 1;
-            hand.hasAce = (int)hand.Cards[0].Rank == 14 || (int)hand.Cards[1].Rank == 14;
-            hand.hasKing = (int)hand.Cards[0].Rank == 13 || (int)hand.Cards[1].Rank == 13;
-            hand.hasQueen = (int)hand.Cards[0].Rank == 12 || (int)hand.Cards[1].Rank == 12;
+            
             // isClose
             // isOneGap         
         }
