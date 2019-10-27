@@ -6,40 +6,19 @@ using System.Threading.Tasks;
 
 namespace PreFlopPlayer
 {
-    public sealed class CardCombo
+    public class CardCombo
     {
-        private readonly Rank FirstCardRank;
-        private readonly Rank SecondCardRank;
-
-        public static readonly List<CardCombo> AllPossibleRankCombos;
+        public Rank FirstCardRank { get; }
+        public Suit FirstCardSuit { get; }
+        public Rank SecondCardRank { get; }
+        public Suit SecondCardSuit { get; }
 
         // Constructor
-        private CardCombo(int firstCardRank, int secondCardRank)
+        public CardCombo(int firstCardRank, int secondCardRank)
         {
             this.FirstCardRank = (Rank)firstCardRank;
             this.SecondCardRank = (Rank)secondCardRank;
         }
-
-        // Compare hand with ComboList
-        public static CardCombo DefineHandCombo(Hand hand)
-        {
-            return AllPossibleRankCombos.Single(h => h.FirstCardRank == hand.Cards[0].Rank && h.SecondCardRank == hand.Cards[1].Rank);
-        }
-
-        private List<CardCombo> CreateListOfPossibleRankCombos()
-        {
-            List<CardCombo> testList = new List<CardCombo>();
-            foreach (Rank firstCardsRank in Enum.GetValues(typeof(Rank)))
-            {
-                foreach (Rank secondCardsRank in Enum.GetValues(typeof(Rank)))
-                {
-                    testList.Add(new CardCombo((int)firstCardsRank, (int)secondCardsRank));
-                }
-            }
-            return testList;
-        }
-
-
         // AA, KK, QQ, JJ, TT, Nines, Eights, Sevens, Sixes, Fives, Fours, Threes, Twos, AK, AQ, AJ, AT, ANine
     }
 }

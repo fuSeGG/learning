@@ -12,7 +12,9 @@ namespace PreFlopPlayer
     {
         static void Main()
         {
-            var myDeck = new Deck();         
+            var myDeck = new Deck();
+            Console.WriteLine(RankCombos.RankPairs.Count);
+            Console.ReadLine();
             
             /*
             TEST: Print all players hands + Take Action where strategy has been written
