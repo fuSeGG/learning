@@ -8,7 +8,7 @@ namespace PreFlopPlayer
 {
     public class PreflopStrategy
     {
-        public Bet LJ(Hand myHand, BetState betState)
+        public Bet UTG(Hand myHand, BetState betState)
         {
             switch (betState.BetCount)
             {
@@ -21,24 +21,29 @@ namespace PreFlopPlayer
                         return new Bet(2.5m);
                     }
                     else return null;
+
                 case 1:
                     Console.WriteLine("This shouldn't happen.");
                     return null;
-                case 2:
-                    if (myHand.isPaired && myHand.CardCombo.FirstCardRank >= Rank.Queen)
-                    {
-                        return new Bet(betState.FacingBetSize * 2.5m);
-                    }
-                    else return null;                    
-                case 3:
-                    if (myHand.hasAce && myHand.isPaired) { }
-                    break;                    
-            }                       
 
-            return null;
+                case 2:
+                    return UTG3B(myHand, betState);
+
+                default:
+                    if (myHand.hasAce && myHand.isPaired)
+                        return new Bet(betState.FacingBetSize * 2.5m);                    
+                    else return null;                    
+            }
         }
 
-        private Bet LJ3B() { return null; }
+        private Bet UTG3B(Hand h, BetState b)
+        {
+            if (h.isPaired && h.CardCombo.FirstCardRank >= Rank.Queen)
+            {
+                return new Bet(b.FacingBetSize * 2.5m);
+            }
+            else return null;
+        }
         private Bet LJAI() { return null; }
 
         public Bet HJ(Hand myHand, BetState b)
