@@ -11,9 +11,12 @@ namespace PreFlopPlayer
         public Card[] Cards = new Card[2];
 
         public CardCombo CardCombo { get; private set; }
-        public bool isPocketPair { get; private set; }
+        public bool isPaired { get; private set; }
         public bool isBroadway { get; private set; }
         public bool isSuited { get; private set; }
+        public bool isSuitedBroadway { get; private set; }
+        public bool isSuitedAce { get; private set; }
+        public bool isSuitedConnecter { get; private set; }
         public bool hasAce { get; private set; }
         public bool hasKing { get; private set; }
         public bool hasQueen { get; private set; }
@@ -23,7 +26,7 @@ namespace PreFlopPlayer
 
         public Hand()
         {
-            CategoriseHand(this);
+            CategoriseHand(this);            
         }
 
         public Hand(Card card1, Card card2)
@@ -44,10 +47,12 @@ namespace PreFlopPlayer
             hand.hasKing = hand.Cards.Any(c => c.Rank == Rank.King);
             hand.hasQueen = hand.Cards.Any(c => c.Rank == Rank.Queen);
 
-            hand.isPocketPair = hand.Cards[0].Rank == hand.Cards[1].Rank;
+            hand.isPaired = hand.Cards[0].Rank == hand.Cards[1].Rank;
             hand.isSuited = hand.Cards[0].Suit == hand.Cards[1].Suit;
             hand.isOpenConnected = Math.Abs((int)hand.Cards[0].Rank - (int)hand.Cards[1].Rank) == 1;
-            
+            hand.isSuitedAce = hand.hasAce && hand.isSuited;
+            hand.isSuitedBroadway = hand.isBroadway && hand.isSuited;
+            hand.isSuitedConnecter = hand.isOpenConnected && hand.isSuited;
             // isClose
             // isOneGap         
         }
