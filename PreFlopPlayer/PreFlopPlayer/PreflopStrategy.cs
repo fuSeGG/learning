@@ -13,30 +13,31 @@ namespace PreFlopPlayer
             switch (betState.BetCount)
             {
                 case 0:
-                    if (myHand.isPaired || myHand.isSuitedAce || myHand.isSuitedBroadway || myHand.isSuitedConnecter ||
-                        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.King && r.SecondCardRank == Rank.Nine && myHand.isSuited) ||
-                        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.Queen && r.SecondCardRank == Rank.Nine && myHand.isSuited) ||
-                        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.Jack && r.SecondCardRank == Rank.Nine && myHand.isSuited))
-                    {
-                        return new Bet(2.5m);
-                    }
-                    else return null;
-
+                    return UTGRFI(myHand);
                 case 1:
                     Console.WriteLine("This shouldn't happen.");
                     return null;
 
                 case 2:
-                    return UTG3B(myHand, betState);
+                    return UTGvs3B(myHand, betState);
 
                 default:
-                    if (myHand.hasAce && myHand.isPaired)
-                        return new Bet(betState.FacingBetSize * 2.5m);                    
-                    else return null;                    
+                    return UTGAllIn(myHand, betState);
             }
         }
 
-        private Bet UTG3B(Hand h, BetState b)
+        private Bet UTGRFI(Hand myHand)
+        {
+            if (myHand.isPaired || myHand.isSuitedAce || myHand.isSuitedBroadway || myHand.isSuitedConnecter ||
+        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.King && r.SecondCardRank == Rank.Nine && myHand.isSuited) ||
+        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.Queen && r.SecondCardRank == Rank.Nine && myHand.isSuited) ||
+        myHand.CardCombo == RankCombos.RankPairs.Where(r => r.FirstCardRank == Rank.Jack && r.SecondCardRank == Rank.Nine && myHand.isSuited))
+            {
+                return new Bet(2.5m);
+            }
+            else return null;
+        }
+        private Bet UTGvs3B(Hand h, BetState b)
         {
             if (h.isPaired && h.CardCombo.FirstCardRank >= Rank.Queen)
             {
@@ -44,7 +45,13 @@ namespace PreFlopPlayer
             }
             else return null;
         }
-        private Bet LJAI() { return null; }
+
+        private Bet UTGAllIn(Hand myHand, BetState betState)
+        {
+            if (myHand.hasAce && myHand.isPaired)
+                return new Bet(betState.FacingBetSize * 2.5m);
+            else return null;
+        }
 
         public Bet HJ(Hand myHand, BetState b)
         {
